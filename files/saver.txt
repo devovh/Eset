@@ -1,0 +1,9 @@
+adb shell settings get global low_power
+0
+adb shell settings get global low_power_trigger_level
+0
+adb shell settings put global low_power_trigger_level 0
+adb shell dumpsys deviceidle whitelist +com.android.phone
+adb shell cmd wifi set-wifi-enabled enabled
+adb shell settings put global wifi_suspend_optimizations_enabled 0
+adb shell settings put global wifi_score_to_drop 0
